@@ -1,169 +1,403 @@
-<!DOCTYPE html>
-<html lang="pr-br">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Street Store | e-comerce</title>
-    <link rel="stylesheet" href="styles/globals.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" /> <!-- Responsividade em dispositivos móveis -->
+  <title>Revista VerdeMente</title>
+
+  <!-- Fonte Montserrat do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="navbar show-menu">    
-        <div class="header-inner-content">
-            <h1 class="logo" >STREET<span>STORE</span></h1>
-            <nav>
-                 <ul>
-                    <li>Home</li>
-                    <li>Produtos</li>
-                    <li>Contato</li>
-                </ul>
-            </nav>
-            <div class="nav-icon-container">
-              <img src="images/cart.png"/>
-              <img src="images/menu.png" class="menu-buttom"/>  
-            </div>
-        </div>
+  <!-- Cabeçalho do site -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Logo do site -->
+      <a class="logo" href="#"><span class="leaf">🌿</span> VerdeMente</a>
+
+      <!-- Navegação principal -->
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#home">Home</a>
+        <a href="#empreenda">Empreenda</a>
+        <a href="#educacao">Educação</a>
+        <a href="#noticias">Notícias</a>
+        <a href="#lojas">Recomendações</a>
+        <a href="#contato" class="btn btn-ghost">Contato</a>
+      </nav>
+
+      <!-- Formulário de pesquisa no INDICE  -->
+      <form class="header-search" role="search" onsubmit="return false;">
+        <input id="searchTop" type="search" placeholder="Pesquisar temas (ex: PET, pneu, economia)" aria-label="Pesquisar" />
+        <button id="searchTopBtn" type="button" aria-label="Pesquisar"><i class="fas fa-search"></i></button>
+        <button id="clearTopBtn" type="button" class="btn-round small" title="Limpar busca">×</button>
+      </form>
+
+      <!-- Botão do menu mobile -->
+      <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span> <!-- Três linhas do hambúrguer -->
+      </button>
     </div>
+  </header>
 
-    <header>
-        <div class="header-inner-content">
-            <div class="header-bottom-side">
-                <div class="header-bottom-side-left">
-                    <h2>Novo estilo ao seu dia-a-dia</h2>
-                    <p> Sucesso profissional é um conceito subjetivo que varia de pessoa para pessoa, mas geralmente é definido como a realização de metas e objetivos na carreira, com satisfação e reconhecimento!
-                    </p>
-                    <button>Saiba mais &#8594;</button>
-                </div>
-                <div class="header-bottom-side-right">
-                    <img src="images/gaming-msi-header.png" alt=""/>
-                </div>
-            </div>
-        </div>
-    </header>
+  <main>
+    <!-- HERO / Seção principal -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>VerdeMente</h1>
+          <p class="lead">Sua mente mais verde, seu mundo mais vivo. Ideias, tutoriais e recomendações para viver de forma mais sustentável.</p>
+          <p class="hero-cta">
+            <a href="#empreenda" class="btn">Comece a Empreender</a>
+            <a href="#lojas" class="btn btn-secondary">Recomendações</a>
+          </p>
 
-    <!-- Main Content -->
-     <main>
-        <div class="gray-background">
-            <div class="page-inner-content">
-                <div class="cols cols-3">  <!-- Adicione o traço -->
-                    <img src="images/products/product-1.png" alt="" />
-                    <img src="images/products/product-2.png" alt="" />
-                    <img src="images/products/product-3.png" alt="" />
-                </div>
-            </div>    
+          <!-- Barra de pesquisa abaixo do hero -->
+          <div class="hero-search">
+            <input id="searchHero" type="search" placeholder="Procure por tutoriais, notícias ou produtos..." aria-label="Pesquisar conteúdo" />
+            <button id="searchHeroBtn" type="button" aria-label="Pesquisar"><i class="fas fa-search"></i></button>
+            <button id="clearHeroBtn" type="button" class="btn-round small" title="Limpar busca">×</button>
+          </div>
         </div>
 
-        <div>
-            <div class="page-inner-content">
-                <h3 class="section-title">Produtos Selecionados</h3>
-                <div class="subtitle-underline"></div>
-                <div class="cols cols-4">
-                    <div class="product">
-                        <img src="images/products/product-4.png" alt="" />
-                        <p class="product-name">Combo Gamer</p>
-                        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        <p class="product-price">4,000.00 <span>M2</span></p>
-                    </div>
-                    <div class="product">
-                        <img src="images/products/product-5.png" alt="" />
-                        <p class="product-name">Placa de Vídeo</p>
-                        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        <p class="product-price">4,000.00 <span>M2</span></p>
-                    </div>
-                    <div class="product">
-                        <img src="images/products/product-6.png" alt="" />
-                        <p class="product-name">Controle Gamer</p>
-                        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        <p class="product-price">4,000.00 <span>M2</span></p>
-                    </div>
-                    <div class="product">
-                        <img src="images/products/product-7.png" alt="" />
-                        <p class="product-name">Cadeira Gamer</p>
-                        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        <p class="product-price">4,000.00 <span>M2</span></p>
-                    </div>
-                </div>
-            </div>
-             <div>
-            <div class="page-inner-content">
-                <h3 class="section-title">Produtos em Destaque</h3>
-                <div class="subtitle-underline"></div>
-                <div class="cols cols-4">
-                    <div class="product">
-                        <img src="images/products/product-8.png" alt="" />
-                        <p class="product-name">Celular 01</p>
-                        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        <p class="product-price">4,000.00 <span>M2</span></p>
-                    </div>
-                    <div class="product">
-                        <img src="images/products/product-8.png" alt="" />
-                        <p class="product-name">Celular 02</p>
-                        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        <p class="product-price">4,000.00 <span>M2</span></p>
-                    </div>
-                    <div class="product">
-                        <img src="images/products/product-9.png" alt="" />
-                        <p class="product-name">Celular 04/p>
-                        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        <p class="product-price">4,000.00 <span>M2</span></p>
-                    </div>
-                    <div class="product">
-                        <img src="images/products/product-10.png" alt="" />
-                        <p class="product-name">Suporte Carregador de Celular</p>
-                        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        <p class="product-price">4,000.00 <span>M2</span></p>
-                    </div>
-                    <div class="product">
-                        <img src="images/products/product-11.png" alt="" />
-                        <p class="product-name">Celular 05</p>
-                        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        <p class="product-price">4,000.00 <span>M2</span></p>
-                    </div>
-                    <div class="product">
-                        <img src="images/products/product-12.png" alt="" />
-                        <p class="product-name">Game</p>
-                        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        <p class="product-price">4,000.00 <span>M2</span></p>
-                    </div>
-                    <div class="product">
-                        <img src="images/products/product-13.png" alt="" />
-                        <p class="product-name">Simulador Gamer</p>
-                        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        <p class="product-price">4,000.00 <span>M2</span></p>
-                    </div>
-                    <div class="product">
-                        <img src="images/products/product-14.png" alt="" />
-                        <p class="product-name">Console Gamer</p>
-                        <p class="rate">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
-                        <p class="product-price">4,000.00 <span>M2</span></p>
-                    </div>
-                </div>
-            </div>
+        <!-- Imagem destaque -->
+        <div class="hero-card">
+          <img alt="Natureza - hero" src="imagens/natureza.jpg" onerror="this.onerror=null;this.src='imagens/natureza.png'">
+          <!-- fallback: se jpg não carregar, usa png -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Notícias -->
+    <section id="noticias" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Notícias Sustentáveis</h2>
+          <div class="section-actions">
+            <button class="btn-round" aria-label="Ver mais notícias">+</button>
+          </div>
         </div>
 
-        <div class="gray-background">
-           <div class="header-inner-content">
-            <div class="header-bottom-side exclusive-container">
-                <div class="header-bottom-side-left">
-                    <h2>Smart Band 4</h2>
-                    <p> O Mi Smart Band 4 tem uma tela AMOLED 39.9% maior que o Mi Band 3, tela completamente digital com brilho ajustável, de tal modo que tudo é claro ao máximo.
-                    </p>
-                    <button>Saiba mais &#8594;</button>
-                </div>
-                <div class="header-bottom-side-right">
-                    <img src="images/exclusive.png" alt=""/>
-                </div>
-            </div>
-        </div> 
-     </main>
+        <!-- Carrossel de notícias -->
+        <div class="carousel" data-carousel>
+          <button class="carousel-arrow prev" aria-label="Anterior notícia">‹</button>
 
-    <script>
-    const navbar = document.querySelector(".navbar");
-    const menuButton = document.querySelector(".menu-button");  <!-- Corrigido o nome da variável -->
+          <div class="carousel-track">
+            <!-- Card de notícia 1 -->
+            <article class="carousel-item news-card" data-keywords="resíduos renda reciclagem">
+              <h3>Título da Notícia 1</h3>
+              <p>Resumo curto da notícia que estimula a leitura e chama ao engajamento.</p>
+              <a href="#" class="card-link">Leia mais</a>
+            </article>
 
-    menuButton.addEventListener("click", () => {
-        navbar.classList.toggle("show-menu");  <!-- Corrigido classList -->
-    });
-</script>
+            <!-- Card de notícia 2 -->
+            <article class="carousel-item news-card" data-keywords="iniciativa local resíduos renda">
+              <h3>Título da Notícia 2</h3>
+              <p>Iniciativas locais que transformam resíduos em renda e oportunidades.</p>
+              <a href="#" class="card-link">Leia mais</a>
+            </article>
+
+            <!-- Card de notícia 3 -->
+            <article class="carousel-item news-card" data-keywords="educação reciclagem escolas">
+              <h3>Título da Notícia 3</h3>
+              <p>Projetos educativos nas escolas que ensinam reciclagem na prática.</p>
+              <a href="#" class="card-link">Leia mais</a>
+            </article>
+          </div>
+
+          <button class="carousel-arrow next" aria-label="Próxima notícia">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Empreenda -->
+    <section id="empreenda" class="section alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Empreenda com DIY Sustentável</h2>
+          <div class="section-actions">
+            <button class="btn-round" aria-label="Ver mais Empreenda">+</button>
+          </div>
+        </div>
+
+        <!-- Carrossel de DIY -->
+        <div class="carousel" data-carousel>
+          <button class="carousel-arrow prev" aria-label="Anterior projeto">‹</button>
+
+          <div class="carousel-track">
+            <!-- DIY 1 -->
+            <article class="carousel-item card" data-keywords="pneu mesa venda">
+              <img src="imagens/plantas.jpg" alt="Mesinha de Pneu - preview" onerror="this.onerror=null;this.src='imagens/plantas.png'">
+              <div class="card-body">
+                <h3>Mesinha de Pneu</h3>
+                <p>Transforme um pneu usado em uma mesinha criativa — passo a passo e custo estimado.</p>
+                <a class="card-link" href="#">Ver tutorial</a>
+              </div>
+            </article>
+
+            <!-- DIY 2 -->
+            <article class="carousel-item card" data-keywords="PET vasos vender artesanato">
+              <img src="imagens/natureza.jpg" alt="Vasos PET - preview" onerror="this.onerror=null;this.src='imagens/natureza.png'">
+              <div class="card-body">
+                <h3>Vasos com PET</h3>
+                <p>Aprenda a cortar, pintar e montar vasos a partir de garrafas PET.</p>
+                <a class="card-link" href="#">Ver tutorial</a>
+              </div>
+            </article>
+
+            <!-- DIY 3 -->
+            <article class="carousel-item card" data-keywords="pallets móveis vender">
+              <img src="imagens/plantas.jpg" alt="Móveis com pallets - preview" onerror="this.onerror=null;this.src='imagens/plantas.png'">
+              <div class="card-body">
+                <h3>Móveis com Pallets</h3>
+                <p>Ideias de móveis simples com pallets para vender ou usar em pequenos negócios.</p>
+                <a class="card-link" href="#">Ver tutorial</a>
+              </div>
+            </article>
+          </div>
+
+          <button class="carousel-arrow next" aria-label="Próximo projeto">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Educação -->
+    <section id="educacao" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Educação Verde</h2>
+          <div class="section-actions">
+            <button class="btn-round" aria-label="Ver mais Educação">+</button>
+          </div>
+        </div>
+
+        <!-- Carrossel educativo -->
+        <div class="carousel" data-carousel>
+          <button class="carousel-arrow prev" aria-label="Anterior educação">‹</button>
+
+          <div class="carousel-track">
+            <article class="carousel-item" data-keywords="lixo reciclagem organico">
+              <h4>Separação do Lixo</h4>
+              <p>Como separar corretamente resíduos orgânicos, recicláveis e perigosos.</p>
+              <a href="#" class="card-link">Ver guia</a>
+            </article>
+
+            <article class="carousel-item" data-keywords="água economia banho torneira">
+              <h4>Economia de Água</h4>
+              <p>Dicas simples para reduzir o consumo em casa e no trabalho.</p>
+              <a href="#" class="card-link">Ver dicas</a>
+            </article>
+
+            <article class="carousel-item" data-keywords="consumo consciente local">
+              <h4>Consumo Consciente</h4>
+              <p>Como escolher produtos que agridem menos o meio ambiente e apoiam a economia local.</p>
+              <a href="#" class="card-link">Leia mais</a>
+            </article>
+          </div>
+
+          <button class="carousel-arrow next" aria-label="Próxima educação">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Recomendações -->
+    <section id="lojas" class="section alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Recomendações de Lojas Sustentáveis</h2>
+          <div class="section-actions">
+            <a href="#" class="btn btn-secondary">Ver recomendações</a>
+          </div>
+        </div>
+
+        <!-- Grid de lojas -->
+        <div class="recommend-grid">
+          <div class="recommend-card" data-keywords="roupa orgânica comércio justo">
+            <h4>Loja Exemplo A</h4>
+            <p>Roupas orgânicas e comércio justo.</p>
+            <a href="#" class="card-link">Visitar</a>
+          </div>
+
+          <div class="recommend-card" data-keywords="materiais artesanato sustentável">
+            <h4>Loja Exemplo B</h4>
+            <p>Materiais para artesanato sustentável.</p>
+            <a href="#" class="card-link">Visitar</a>
+          </div>
+
+          <div class="recommend-card" data-keywords="energia solar painéis domésticos">
+            <h4>Loja Exemplo C</h4>
+            <p>Painéis solares e soluções domésticas de energia.</p>
+            <a href="#" class="card-link">Visitar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="section contact">
+      <div class="container">
+        <h2>Contato</h2>
+        <form class="contact-form" action="#" novalidate>
+          <label>
+            <span>Nome</span>
+            <input type="text" name="nome" placeholder="Seu nome" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" placeholder="seu@exemplo.com" required>
+          </label>
+          <label>
+            <span>Mensagem</span>
+            <textarea name="mensagem" rows="5" placeholder="Escreva sua mensagem"></textarea>
+          </label>
+          <button class="btn" type="submit">Enviar mensagem</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <strong>Revista VerdeMente</strong> — Sua mente mais verde, seu mundo mais vivo.</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // MENU MOBILE: abre e fecha nav ao clicar no botão hamburger
+    (function(){
+      const btn = document.querySelector('.hamburger');
+      const nav = document.querySelector('.main-nav');
+      btn?.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open'); // adiciona ou remove a classe para mostrar/esconder menu
+      });
+    })();
+
+    // FILTRAGEM: pesquisa sincronizada entre as duas barras de pesquisa
+    function filterAll(keyword) {
+      const q = (keyword||'').trim().toLowerCase();
+      // filtra itens dos carrosseis
+      document.querySelectorAll('.carousel .carousel-item').forEach(item => {
+        const text = (item.getAttribute('data-keywords') || ' ' + item.innerText).toLowerCase();
+        const match = q === '' || text.indexOf(q) !== -1;
+        item.style.display = match ? '' : 'none'; // mostra ou esconde item
+      });
+      // filtra cards de recomendações
+      document.querySelectorAll('.recommend-card').forEach(card => {
+        const text = (card.getAttribute('data-keywords') || ' ' + card.innerText).toLowerCase();
+        const match = q === '' || text.indexOf(q) !== -1;
+        card.style.display = match ? '' : 'none';
+      });
+    }
+
+    (function(){
+      const searchTop = document.getElementById('searchTop');
+      const searchHero = document.getElementById('searchHero');
+      const searchTopBtn = document.getElementById('searchTopBtn');
+      const searchHeroBtn = document.getElementById('searchHeroBtn');
+      const clearTop = document.getElementById('clearTopBtn');
+      const clearHero = document.getElementById('clearHeroBtn');
+
+      // sincroniza pesquisas
+      function doSearchFrom(input){
+        const q = input.value || '';
+        searchTop.value = q;
+        searchHero.value = q;
+        filterAll(q);
+      }
+      [searchTop, searchHero].forEach(inp => {
+        inp && inp.addEventListener('keydown', e => {
+          if(e.key === 'Enter'){ e.preventDefault(); doSearchFrom(inp); } // pesquisa ao apertar Enter
+        });
+      });
+      searchTopBtn?.addEventListener('click', () => doSearchFrom(searchTop));
+      searchHeroBtn?.addEventListener('click', () => doSearchFrom(searchHero));
+      clearTop?.addEventListener('click', () => { searchTop.value=''; searchHero.value=''; filterAll(''); });
+      clearHero?.addEventListener('click', () => { searchTop.value=''; searchHero.value=''; filterAll(''); });
+    })();
+
+    // CARROSSEL INFINITO
+    (function(){
+      document.querySelectorAll('[data-carousel]').forEach(carousel => {
+        const track = carousel.querySelector('.carousel-track');
+        const btnPrev = carousel.querySelector('.carousel-arrow.prev');
+        const btnNext = carousel.querySelector('.carousel-arrow.next');
+        if(!track) return;
+        const itemsSelector = '.carousel-item';
+
+        // retorna os itens visíveis
+        function visibleItems() {
+          return Array.from(track.querySelectorAll(itemsSelector)).filter(i => i.style.display !== 'none');
+        }
+
+        // calcula a largura de cada cartão
+        function cardWidth() {
+          const current = visibleItems()[0];
+          if(!current) return Math.round(track.clientWidth * 0.8);
+          const style = window.getComputedStyle(current);
+          const marginRight = parseFloat(style.marginRight) || 0;
+          return Math.round(current.offsetWidth + marginRight);
+        }
+
+        // próximo setinha
+        btnNext?.addEventListener('click', () => {
+          const visible = visibleItems();
+          if(visible.length === 0) return;
+          const atEnd = Math.ceil(track.scrollLeft + track.clientWidth) >= track.scrollWidth - 2;
+          if(atEnd){
+            track.scrollTo({ left: 0, behavior: 'smooth' }); // volta pro início
+            return;
+          }
+          track.scrollBy({ left: cardWidth(), behavior: 'smooth' }); // rola para frente
+        });
+
+        // setinha anterior
+        btnPrev?.addEventListener('click', () => {
+          const visible = visibleItems();
+          if(visible.length === 0) return;
+          const atStart = track.scrollLeft <= 5;
+          if(atStart){
+            const endPos = track.scrollWidth - track.clientWidth;
+            track.scrollTo({ left: endPos, behavior: 'smooth' }); // vai para o fim
+            return;
+          }
+          track.scrollBy({ left: -cardWidth(), behavior: 'smooth' }); // rola para trás
+        });
+
+        // atualiza visibilidade das setas
+        function updateArrows(){
+          const vis = visibleItems().length;
+          if(!btnPrev || !btnNext) return;
+          if(track.clientWidth >= track.scrollWidth || vis <= 1){
+            btnPrev.style.display = 'none';
+            btnNext.style.display = 'none';
+          } else {
+            btnPrev.style.display = '';
+            btnNext.style.display = '';
+          }
+          btnPrev.style.opacity = track.scrollLeft <= 5 ? '0.4' : '1';
+          btnNext.style.opacity = (track.scrollWidth - track.clientWidth - track.scrollLeft) <= 5 ? '0.4' : '1';
+        }
+
+        track.addEventListener('scroll', updateArrows);
+        window.addEventListener('resize', updateArrows);
+        const obs = new MutationObserver(updateArrows); 
+        obs.observe(track, { childList:true, subtree:true, attributes:true, attributeFilter:['style']});
+        updateArrows(); // primeira atualização
+      });
+    })();
+  </script>
 </body>
 </html>
-
